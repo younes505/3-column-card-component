@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #f2f2f2;
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.cards {
+  width: 90vw;
+  max-width: 920px;
+  height: 500px;
+  margin: 5vh 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+}
+
+.card {
+  margin-top: -13px;
+  width: 307px;
+  height: 500px;
+  padding: 48px;
+  border-radius: 10px;
+}
+
+.card:nth-child(1) {
+  background-color: #e38826;
+}
+
+.card:nth-child(2) {
+  background-color: #006970;
+}
+
+.card:nth-child(3) {
+  background-color: #004241;
+}
+
+.card img {
+  margin-bottom: 35px;
+}
+
+.card h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  margin-bottom: 25px;
+}
+
+.card p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 83px;
+}
+
+.card button {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 11.5px 31.5px;
+  border-radius: 50px;
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.card button.btn-orange {
+  color: #e38826;
+}
+
+.card button.btn-orange:hover {
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  background-color: #e38826;
+}
+
+.card button.btn-light-cyan {
+  color: #006970;
+}
+
+.card button.btn-light-cyan:hover {
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  background-color: #006970;
+}
+
+.card button.btn-dark-cyan {
+  color: #004241;
+}
+
+.card button.btn-dark-cyan:hover {
+  color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  background-color: #004241;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*# sourceMappingURL=main.css.map */

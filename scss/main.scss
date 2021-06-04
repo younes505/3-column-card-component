@@ -1,0 +1,137 @@
+// font-families
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+// Colors
+$clr-orange: hsl(31, 77%, 52%);
+$clr-light-cyan: hsl(184, 100%, 22%);
+$clr-dark-cyan: hsl(179, 100%, 13%);
+$clr-p: hsla(0, 0%, 100%, 0.75);
+$clr-bg-h-btn: hsl(0, 0%, 95%);
+
+// Typography
+$ff-heading: "Big Shoulders Display", cursive;
+$ff-body: "Lexend Deca", sans-serif;
+
+// Base
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $ff-body;
+  background-color: $clr-bg-h-btn;
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+// Cards
+
+.cards {
+  width: 90vw;
+  max-width: 920px;
+  height: 500px;
+  margin: 5vh 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+}
+
+.card {
+  margin-top: -13px;
+  width: 307px;
+  height: 500px;
+  padding: 48px;
+  border-radius: 10px;
+
+  &:nth-child(1) {
+    background-color: $clr-orange;
+  }
+  &:nth-child(2) {
+    background-color: $clr-light-cyan;
+  }
+  &:nth-child(3) {
+    background-color: $clr-dark-cyan;
+  }
+
+  img {
+    margin-bottom: 35px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: $clr-bg-h-btn;
+    margin-bottom: 25px;
+  }
+
+  p {
+    font-family: $ff-body;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: $clr-p;
+    margin-bottom: 83px;
+  }
+
+  button {
+    font-family: $ff-body;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 11.5px 31.5px;
+    border-radius: 50px;
+    background-color: $clr-bg-h-btn;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &.btn-orange {
+      color: $clr-orange;
+
+      &:hover {
+        color: $clr-bg-h-btn;
+        border: 2px solid $clr-bg-h-btn;
+        background-color: $clr-orange;
+      }
+    }
+    &.btn-light-cyan {
+      color: $clr-light-cyan;
+      &:hover {
+        color: $clr-bg-h-btn;
+        border: 2px solid $clr-bg-h-btn;
+        background-color: $clr-light-cyan;
+      }
+    }
+    &.btn-dark-cyan {
+      color: $clr-dark-cyan;
+
+      &:hover {
+        color: $clr-bg-h-btn;
+        border: 2px solid $clr-bg-h-btn;
+        background-color: $clr-dark-cyan;
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
